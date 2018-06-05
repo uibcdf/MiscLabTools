@@ -1,4 +1,3 @@
-import pandas as pd
 from numpy import concatenate
 
 def InfoList(dfs):
@@ -10,11 +9,11 @@ def InfoList(dfs):
         print(df.name, df.shape[0]) 
 
 
-def LoadCSV(file_path=None):
-    
-    df=pd.read_csv(file_path)
-    df.name=file_path
-    return df
+# def LoadCSV(file_path=None):
+# 
+    # df=pd.read_csv(file_path)
+    # df.name=file_path
+    # return df
 
 def GetColFromList(dataframe_list,column):
 

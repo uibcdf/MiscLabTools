@@ -1,4 +1,4 @@
-import pyemma
+# import pyemma
 
 #def most_weighted_node_in_basin(basin,pcca):
 #    jj=pcca.stationary_probability[pcca.metastable_sets[basin]].argmax()
