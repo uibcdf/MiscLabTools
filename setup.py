@@ -6,7 +6,6 @@ setup(
     version='0.1',
     author='UIBCDF Lab',
     author_email='uibcdf@gmail.com',
-    packages=['pytools_uibcdf'],
     package_dir={'pytools_uibcdf': 'pytools_uibcdf'},
     packages=['pytools_uibcdf', 'pytools_uibcdf.fileconverters', 'pytools_uibcdf.dataconverters','pytools_uibcdf.Scribe'],
     package_data={'pytools_uibcdf': []},
