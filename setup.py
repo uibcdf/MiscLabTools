@@ -8,6 +8,7 @@ setup(
     author_email='uibcdf@gmail.com',
     packages=['pytools_uibcdf'],
     package_dir={'pytools_uibcdf': 'pytools_uibcdf'},
+    packages=['pytools_uibcdf', 'pytools_uibcdf.fileconverters', 'pytools_uibcdf.dataconverters','pytools_uibcdf.Scribe'],
     package_data={'pytools_uibcdf': []},
     url='http://uibcdf.org',
     download_url ='https://github.com/uibcdf/PyTools_uibcdf',
