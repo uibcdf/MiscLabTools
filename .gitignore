@@ -1,4 +1,12 @@
 __pycache__/*
 */__pycache__/*
 *.so
+*.pyc
 INSTALL.log
+build/*
+*.egg-info/*
+*.ipynb_checkpoints
+*/_build/*
+docs/api/generated/*
+*.mod
+

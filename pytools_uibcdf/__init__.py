@@ -5,5 +5,6 @@
 #from . import DataFrames
 #from . import DataTypes
 from . import List
+from . import Time
 #from . import Multiprocessing
 #from . import Pyemma
