@@ -1,5 +1,10 @@
+from time import asctime as _asctime, localtime as _localtime
 
-def formatting_elapsed_time(elapse_time):
+def formatted_local_time():
+
+    return _asctime(_localtime())
+
+def formatted_elapsed_time(elapse_time):
 
     days, rest_time = divmod(elapse_time,86400)
     days = str(int(days)).zfill(2)
