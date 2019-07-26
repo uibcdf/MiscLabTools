@@ -1,4 +1,5 @@
 from time import asctime as _asctime, localtime as _localtime
+import simtk.unit as unit
 
 def formatted_local_time():
 
@@ -16,4 +17,16 @@ def formatted_elapsed_time(elapse_time):
     seconds_int = str(int(seconds_int)).zfill(2)
     seconds_dec = str(int(seconds_dec*10))
     return(days+"d:"+hours+"h:"+minutes+"m:"+seconds_int+"."+seconds_dec+"s")
+
+def to_steps(time, step_size = 2*unit.femtoseconds):
+
+    number_steps = time / step_size 
+    number_steps = round(number_steps)
+    return number_steps
+
+
+
+
+
+
 
