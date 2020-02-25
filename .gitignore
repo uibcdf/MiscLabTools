@@ -3,10 +3,12 @@ __pycache__/*
 *.so
 *.pyc
 INSTALL.log
-build/*
 *.egg-info/*
+record.txt
 *.ipynb_checkpoints
-*/_build/*
-docs/api/generated/*
+/docs/api/_autosummary
 *.mod
+dist/*
+*/build/
+build/
 

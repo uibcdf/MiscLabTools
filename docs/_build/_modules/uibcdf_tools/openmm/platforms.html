@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>uibcdf_tools.openmm.platforms &mdash; UIBCDF Tools 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> UIBCDF Tools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html#latest-stable-version">Latest stable version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Installation.html#developing-version">Developing version</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">OpenMM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/_autosummary/uibcdf_tools.openmm.available_platforms.html">available_platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/_autosummary/uibcdf_tools.openmm.loading_failures.html">loading_failures</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">UIBCDF Tools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>uibcdf_tools.openmm.platforms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for uibcdf_tools.openmm.platforms</h1><div class="highlight"><pre>
+<span></span>
+<div class="viewcode-block" id="available_platforms"><a class="viewcode-back" href="../../../api/_autosummary/uibcdf_tools.openmm.available_platforms.html#uibcdf_tools.openmm.available_platforms">[docs]</a><span class="k">def</span> <span class="nf">available_platforms</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Available platforms to run OpenMM integratos</span>
+
+<span class="sd">    List of available platforms to run an OpenMM MD integrators.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    verbose : bool, default=True.</span>
+<span class="sd">        If True, the method prints out a message with a line corresponding to each available</span>
+<span class="sd">        platorm. If False, the method returns the list of platform names.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    &gt;&gt;&gt; from uibcdf_tools import available_platforms</span>
+<span class="sd">    &gt;&gt;&gt; available_platorms()</span>
+<span class="sd">    Platform Reference with speed 1.0</span>
+<span class="sd">    Platform CPU with speed 10.0</span>
+<span class="sd">    Platform CUDA with speed 100.0</span>
+<span class="sd">    Platform OpenCL with speed 50.0</span>
+
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    This methods invokes the simtk.openmm methods to work with the class `Platform`. You can check</span>
+<span class="sd">    the `section Platforms in the OpenMM User Guide web page</span>
+<span class="sd">    &lt;http://docs.openmm.org/7.1.0/userguide/application.html#platforms&gt;`_ and the `OpenMM Python API</span>
+<span class="sd">    documentation &lt;http://docs.openmm.org/latest/api-python/generated/simtk.openmm.openmm.Platform.html#&gt;`_.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="kn">import</span> <span class="nn">simtk.openmm</span> <span class="k">as</span> <span class="nn">mm</span>
+
+    <span class="n">platforms_available</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Platform</span><span class="o">.</span><span class="n">getNumPlatforms</span><span class="p">()):</span>
+        <span class="n">platform_name</span>  <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Platform</span><span class="o">.</span><span class="n">getPlatform</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+        <span class="n">platform</span>       <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Platform</span><span class="o">.</span><span class="n">getPlatformByName</span><span class="p">(</span><span class="n">platform_name</span><span class="p">)</span>
+        <span class="n">platform_speed</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">getSpeed</span><span class="p">()</span>
+        <span class="n">platforms_available</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">platform_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Platform </span><span class="si">{}</span><span class="s1"> with speed </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">platform_name</span><span class="p">,</span><span class="n">platform_speed</span><span class="p">))</span>
+        <span class="k">del</span><span class="p">(</span><span class="n">platform_name</span><span class="p">,</span> <span class="n">platform</span><span class="p">,</span> <span class="n">platform_speed</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">verbose</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">platforms_available</span></div>
+
+<div class="viewcode-block" id="loading_failures"><a class="viewcode-back" href="../../../api/_autosummary/uibcdf_tools.openmm.loading_failures.html#uibcdf_tools.openmm.loading_failures">[docs]</a><span class="k">def</span> <span class="nf">loading_failures</span><span class="p">():</span>
+
+    <span class="sd">&quot;&quot;&quot;Loading failures of platorms to run OpenMM integrators</span>
+
+<span class="sd">    List of failures at the time of importing OpenMM regarding the platforms to run the</span>
+<span class="sd">    integrators..</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    &gt;&gt;&gt; from uibcdf_tools import loading_failures</span>
+<span class="sd">    &gt;&gt;&gt; loading_failures()</span>
+<span class="sd">    (&#39;Error loading library /home/diego/Myopt/Miniconda/miniconda3/envs/UIBCDF_lab_dev/lib/plugins/libOpenMMCUDA.so: libcufft.so.9.2: cannot open shared object file: No such file or directory&#39;, &#39;Error loading library /home/diego/Myopt/Miniconda/miniconda3/envs/UIBCDF_lab_dev/lib/plugins/libOpenMMRPMDCUDA.so: libOpenMMCUDA.so: cannot open shared object file: No such file or directory&#39;, &#39;Error loading library /home/diego/Myopt/Miniconda/miniconda3/envs/UIBCDF_lab_dev/lib/plugins/libOpenMMDrudeCUDA.so: libOpenMMCUDA.so: cannot open shared object file: No such file or directory&#39;, &#39;Error loading library /home/diego/Myopt/Miniconda/miniconda3/envs/UIBCDF_lab_dev/lib/plugins/libOpenMMAmoebaCUDA.so: libOpenMMCUDA.so: cannot open shared object file: No such file or directory&#39;, &#39;Error loading library /home/diego/Myopt/Miniconda/miniconda3/envs/UIBCDF_lab_dev/lib/plugins/libOpenMMCudaCompiler.so: libnvrtc.so.9.2: cannot open shared object file: No such file or directory&#39;)</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    This methods invokes the simtk.openmm methods to work with the class `Platform`. You can check</span>
+<span class="sd">    the `section Platforms in the OpenMM User Guide web page</span>
+<span class="sd">    &lt;http://docs.openmm.org/7.1.0/userguide/application.html#platforms&gt;`_ and the `OpenMM Python API</span>
+<span class="sd">    documentation &lt;http://docs.openmm.org/latest/api-python/generated/simtk.openmm.openmm.Platform.html#&gt;`_.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">simtk.openmm</span> <span class="k">as</span> <span class="nn">mm</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Platform</span><span class="o">.</span><span class="n">getPluginLoadFailures</span><span class="p">())</span></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, UIBCDF Lab at the Mexico City Childrens Hospital Federico Gomez and authors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
