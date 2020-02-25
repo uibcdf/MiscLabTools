@@ -2,15 +2,15 @@ import distutils.extension
 from setuptools import setup, find_packages
 
 setup(
-    name='pytools_uibcdf',
+    name='uibcdf_tools',
     version='0.1',
     author='UIBCDF Lab',
     author_email='uibcdf@gmail.com',
-    package_dir={'pytools_uibcdf': 'pytools_uibcdf'},
+    package_dir={'uibcdf_tools': 'uibcdf_tools'},
     packages=find_packages(),
-    package_data={'pytools_uibcdf': []},
+    package_data={'uibcdf_tools': []},
     url='http://uibcdf.org',
-    download_url ='https://github.com/uibcdf/PyTools_uibcdf',
+    download_url ='https://github.com/uibcdf/UIBCDF_tools',
     license='MIT',
     description="doc to be written",
     long_description="long doc to be written",
