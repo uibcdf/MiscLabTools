@@ -1,5 +1,5 @@
-available\_platforms
-====================
+uibcdf\_tools.openmm.available\_platforms
+=========================================
 
 .. currentmodule:: uibcdf_tools.openmm
 

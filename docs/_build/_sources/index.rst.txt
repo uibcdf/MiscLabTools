@@ -13,6 +13,13 @@ UIBCDF Tools
    Installation.md
 
 .. toctree::
+   :caption: Matplotlib
+   :maxdepth: 2
+
+   contents/matplotlib/ColorMaps.ipynb
+
+
+.. toctree::
    :caption: API Documentation
    :maxdepth: 1
 

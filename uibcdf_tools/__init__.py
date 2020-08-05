@@ -10,3 +10,5 @@ from . import time as time
 #from . import Pyemma
 
 from . import openmm as openmm
+from . import colors as colors
+from . import matplotlib as matplotlib

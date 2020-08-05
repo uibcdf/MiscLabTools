@@ -1,0 +1,857 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Color maps &mdash; UIBCDF Tools 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="OpenMM" href="../../api/index.html" />
+    <link rel="prev" title="Installation" href="../../Installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> UIBCDF Tools
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation.html">Installation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Matplotlib</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Color maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#UIBCDF-Color-Palettes">UIBCDF Color Palettes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Palette_1">Palette_1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Color maps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">OpenMM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/_autosummary/uibcdf_tools.openmm.available_platforms.html">uibcdf_tools.openmm.available_platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/_autosummary/uibcdf_tools.openmm.loading_failures.html">uibcdf_tools.openmm.loading_failures</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">UIBCDF Tools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Color maps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/contents/matplotlib/ColorMaps.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">uibcdf_tools</span> <span class="k">as</span> <span class="nn">uibcdf_tools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Color-maps">
+<h1>Color maps<a class="headerlink" href="#Color-maps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="UIBCDF-Color-Palettes">
+<h2>UIBCDF Color Palettes<a class="headerlink" href="#UIBCDF-Color-Palettes" title="Permalink to this headline">¶</a></h2>
+<p>The UIBCDF color palettes are defined to make the color chosen easy at the time of creating a plot or a figure. At the same time using the palettes imprints a recognizable mark to figures, slides, posters and papers.</p>
+<p>Every palette is made of 16 colors: “light_red”, “red”, “dark_red”, “light_green”, “green”, “dark_green”, “light_blue”, “blue”, “dark_blue”, “light_yellow”, “yellow”, “dark_yellow”, “light_orange”, “orange”, “dark_orange”, “light_purple”, “purple”, “dark_purple”, “light_brown”, “brown”, “dark_brown”, “light_gray”, “gray”, “dark_gray” and “white”.</p>
+<p>Although the purpose of this module is having predefined color palettes, a customized palette can be created just with a dictionary where the 16 colors are defined in hexadecimal color code. The webpages <a class="reference external" href="https://coolors.co/">coolors.co</a> and <a class="reference external" href="http://colormind.io/">colormind.io</a> can be used to choose a new color palette.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">my_colors</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;dark_red&#39;</span> <span class="p">:</span> <span class="s1">&#39;#9B1C1C&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;red&#39;</span> <span class="p">:</span> <span class="s1">&#39;#D62828&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_red&#39;</span> <span class="p">:</span> <span class="s1">&#39;#E98686&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_green&#39;</span> <span class="p">:</span> <span class="s1">&#39;#384733&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;green&#39;</span> <span class="p">:</span> <span class="s1">&#39;#77966D&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_green&#39;</span> <span class="p">:</span> <span class="s1">&#39;#9CB295&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_blue&#39;</span> <span class="p">:</span> <span class="s1">&#39;#00283D&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;blue&#39;</span> <span class="p">:</span> <span class="s1">&#39;#006AA3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_blue&#39;</span> <span class="p">:</span> <span class="s1">&#39;#85D4FF&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_yellow&#39;</span> <span class="p">:</span> <span class="s1">&#39;#C88304&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;yellow&#39;</span> <span class="p">:</span> <span class="s1">&#39;#FBAF23&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_yellow&#39;</span> <span class="p">:</span> <span class="s1">&#39;#FCCC73&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_orange&#39;</span> <span class="p">:</span> <span class="s1">&#39;#C92E03&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;orange&#39;</span> <span class="p">:</span> <span class="s1">&#39;#F13704&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_orange&#39;</span> <span class="p">:</span> <span class="s1">&#39;#FC7753&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_purple&#39;</span> <span class="p">:</span> <span class="s1">&#39;#341E24&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;purple&#39;</span> <span class="p">:</span> <span class="s1">&#39;#8E5263&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_purple&#39;</span> <span class="p">:</span> <span class="s1">&#39;#D9BDC5&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_brown&#39;</span> <span class="p">:</span> <span class="s1">&#39;#261702&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;brown&#39;</span> <span class="p">:</span> <span class="s1">&#39;#4C2E05&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_brown&#39;</span> <span class="p">:</span> <span class="s1">&#39;#865209&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dark_gray&#39;</span> <span class="p">:</span> <span class="s1">&#39;#3E3C3D&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;gray&#39;</span> <span class="p">:</span> <span class="s1">&#39;#828783&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;light_gray&#39;</span> <span class="p">:</span> <span class="s1">&#39;#B6B9B7&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;white&#39;</span> <span class="p">:</span> <span class="s1">&#39;#FBFFFE&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">my_palette</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Palette</span><span class="p">(</span><span class="n">my_colors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Palette_1">
+<h3>Palette_1<a class="headerlink" href="#Palette_1" title="Permalink to this headline">¶</a></h3>
+<p>At this time there is only a color palette predefined named ‘Palette_1’:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Palette_1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>Colors are storaged in a dictionary where color names are the keys:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">palette</span><span class="o">.</span><span class="n">color</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;dark_red&#39;: &#39;#9B1C1C&#39;,
+ &#39;red&#39;: &#39;#D62828&#39;,
+ &#39;light_red&#39;: &#39;#E98686&#39;,
+ &#39;dark_green&#39;: &#39;#384733&#39;,
+ &#39;green&#39;: &#39;#77966D&#39;,
+ &#39;light_green&#39;: &#39;#9CB295&#39;,
+ &#39;dark_blue&#39;: &#39;#00283D&#39;,
+ &#39;blue&#39;: &#39;#006AA3&#39;,
+ &#39;light_blue&#39;: &#39;#85D4FF&#39;,
+ &#39;dark_yellow&#39;: &#39;#C88304&#39;,
+ &#39;yellow&#39;: &#39;#FBAF23&#39;,
+ &#39;light_yellow&#39;: &#39;#FCCC73&#39;,
+ &#39;dark_orange&#39;: &#39;#C92E03&#39;,
+ &#39;orange&#39;: &#39;#F13704&#39;,
+ &#39;light_orange&#39;: &#39;#FC7753&#39;,
+ &#39;dark_purple&#39;: &#39;#341E24&#39;,
+ &#39;purple&#39;: &#39;#8E5263&#39;,
+ &#39;light_purple&#39;: &#39;#D9BDC5&#39;,
+ &#39;dark_brown&#39;: &#39;#261702&#39;,
+ &#39;brown&#39;: &#39;#4C2E05&#39;,
+ &#39;light_brown&#39;: &#39;#865209&#39;,
+ &#39;dark_gray&#39;: &#39;#3E3C3D&#39;,
+ &#39;gray&#39;: &#39;#828783&#39;,
+ &#39;light_gray&#39;: &#39;#B6B9B7&#39;,
+ &#39;white&#39;: &#39;#FBFFFE&#39;}
+</pre></div></div>
+</div>
+<p>Every palette has two methods to get the RGB or hexadecimal code of each color:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">palette</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(0.8392156862745098, 0.1568627450980392, 0.1568627450980392)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">palette</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;#D62828&#39;
+</pre></div></div>
+</div>
+<p>Lets see how this palette looks:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Palette_1</span><span class="p">()</span>
+
+<span class="n">color_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">]</span>
+<span class="n">color_place</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Palette_1&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">color_names</span><span class="p">,</span> <span class="n">color_place</span><span class="p">):</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="n">palette</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="s1">&#39;light_&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">),</span> <span class="n">palette</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">palette</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="s1">&#39;dark_&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">)])</span>
+    <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span> <span class="n">cax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">cbar</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="n">palette</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)])</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span> <span class="n">cax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/contents_matplotlib_ColorMaps_14_0.png" src="../../_images/contents_matplotlib_ColorMaps_14_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Color maps<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>In addition to having color palettes predefined, color gradients built as <code class="docutils literal notranslate"><span class="pre">cmap</span></code> objects from matplotlib are also available in this module. These gradients depend on the color palette used. Lets show how they work with ‘Palette_1’:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">palette</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Palette_1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;red_white_blue&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The new object <code class="docutils literal notranslate"><span class="pre">cmap</span></code> gives an RGBA color code to each float number in the range [0.0, 1.0]</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.26</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(0.9143252595155709, 0.5933102652825836, 0.591280276816609, 1.0)
+</pre></div></div>
+</div>
+<p>This way our color map can already be used in any matplotlib method accepting cmaps:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x_coors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">y_coors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">color_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">sct</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_coors</span><span class="p">,</span> <span class="n">y_coors</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">sizes</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">color_value</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sct</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/contents_matplotlib_ColorMaps_21_0.png" src="../../_images/contents_matplotlib_ColorMaps_21_0.png" />
+</div>
+</div>
+<p>Lets then show the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> gradient corresponding to ‘Palette_1’ with name ‘red_white_blue’:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;red_white_blue&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="p">)</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span>
+             <span class="n">cax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;red_white_blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/contents_matplotlib_ColorMaps_23_0.png" src="../../_images/contents_matplotlib_ColorMaps_23_0.png" />
+</div>
+</div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">uibcdf_tools.matplotlib.color_maps.get_cmap</span></code> accepts a third input argument: <code class="docutils literal notranslate"><span class="pre">tone</span></code>. This argument takes the value “None” by default, but it can take the string “light” or “dark” to produce the color scales corresponding to the light or dark colors (red and blue in this case);</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;red_white_blue&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="p">,</span> <span class="n">tone</span><span class="o">=</span><span class="s1">&#39;dark&#39;</span><span class="p">)</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span>
+             <span class="n">cax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;red_white_blue (tone=&quot;dark&quot;)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/contents_matplotlib_ColorMaps_25_0.png" src="../../_images/contents_matplotlib_ColorMaps_25_0.png" />
+</div>
+</div>
+<p>Lets see all cmaps predefined with ‘Palette_1’:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">n_bars</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">cmap_names</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_bars</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">n_bars</span><span class="p">),</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Palette_1&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="n">ax_ind</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">cmap_names</span><span class="p">:</span>
+
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">palette</span><span class="p">,</span> <span class="n">tone</span><span class="o">=</span><span class="s1">&#39;light&#39;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span> <span class="n">cax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="s1">&#39;light&#39;</span><span class="p">)</span>
+
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">palette</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span> <span class="n">cax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">palette</span><span class="p">,</span> <span class="n">tone</span><span class="o">=</span><span class="s1">&#39;dark&#39;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span> <span class="n">cax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">ax_ind</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="s1">&#39;dark&#39;</span><span class="p">)</span>
+    <span class="n">ax_ind</span><span class="o">+=</span><span class="mi">1</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/contents_matplotlib_ColorMaps_27_0.png" src="../../_images/contents_matplotlib_ColorMaps_27_0.png" />
+</div>
+</div>
+<p>Given a color palette, a new <code class="docutils literal notranslate"><span class="pre">cmap</span></code> can be easily defined with the help of the method <code class="docutils literal notranslate"><span class="pre">uibcdf_tools.matplotlib.color_maps.make_cmap_linear</span></code>. A list or tuple of pairs value-color is needed:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;customize&#39;</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span><span class="s1">&#39;light_yellow&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.33</span><span class="p">,</span><span class="s1">&#39;light_orange&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.66</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="s1">&#39;dark_purple&#39;</span><span class="p">]]</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">uibcdf_tools</span><span class="o">.</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">color_maps</span><span class="o">.</span><span class="n">make_cmap_linear</span><span class="p">(</span><span class="s1">&#39;customize&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">),</span> <span class="n">cax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;customize&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/contents_matplotlib_ColorMaps_29_0.png" src="../../_images/contents_matplotlib_ColorMaps_29_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../api/index.html" class="btn btn-neutral float-right" title="OpenMM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../Installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, UIBCDF Lab at the Mexico City Childrens Hospital Federico Gomez and authors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
